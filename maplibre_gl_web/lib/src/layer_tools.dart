@@ -7,6 +7,7 @@ const _layoutProperties = {
   "symbol-avoid-edges",
   "symbol-sort-key",
   "symbol-z-order",
+  "symbol-height-offset",
   "icon-allow-overlap",
   "icon-overlap",
   "icon-ignore-placement",

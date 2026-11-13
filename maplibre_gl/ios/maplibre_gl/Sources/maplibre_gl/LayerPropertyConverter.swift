@@ -56,6 +56,8 @@ class LayerPropertyConverter {
                     symbolLayer.symbolSortKey = expression
                 case "symbol-z-order":
                     symbolLayer.symbolZOrder = expression
+                case "symbol-height-offset":
+                    symbolLayer.symbolHeightOffset = expression
                 case "icon-allow-overlap":
                     symbolLayer.iconAllowsOverlap = expression
                 case "icon-ignore-placement":

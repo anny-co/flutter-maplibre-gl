@@ -259,6 +259,17 @@ class SymbolLayerProperties implements LayerProperties {
   ///   basic functionality with js, android, ios
   final dynamic symbolZOrder;
 
+  /// The height above the ground, in metres, at which the symbol is drawn:
+  /// its anchor is projected at that height, for placement and collision too.
+  ///
+  /// Type: number
+  ///   default: 0
+  ///
+  /// Sdk Support:
+  ///   basic functionality with js (6.6), and android and ios on anny's
+  ///   MapLibre Native fork; there only constant or zoom-dependent
+  final dynamic symbolHeightOffset;
+
   /// If true, the icon will be visible even if it collides with other
   /// previously drawn symbols.
   ///
@@ -894,6 +905,7 @@ class SymbolLayerProperties implements LayerProperties {
     this.symbolAvoidEdges,
     this.symbolSortKey,
     this.symbolZOrder,
+    this.symbolHeightOffset,
     this.iconAllowOverlap,
     this.iconOverlap,
     this.iconIgnorePlacement,
@@ -957,6 +969,7 @@ class SymbolLayerProperties implements LayerProperties {
       symbolAvoidEdges: changes.symbolAvoidEdges ?? symbolAvoidEdges,
       symbolSortKey: changes.symbolSortKey ?? symbolSortKey,
       symbolZOrder: changes.symbolZOrder ?? symbolZOrder,
+      symbolHeightOffset: changes.symbolHeightOffset ?? symbolHeightOffset,
       iconAllowOverlap: changes.iconAllowOverlap ?? iconAllowOverlap,
       iconOverlap: changes.iconOverlap ?? iconOverlap,
       iconIgnorePlacement: changes.iconIgnorePlacement ?? iconIgnorePlacement,
@@ -1031,6 +1044,7 @@ class SymbolLayerProperties implements LayerProperties {
     addIfPresent('symbol-avoid-edges', symbolAvoidEdges);
     addIfPresent('symbol-sort-key', symbolSortKey);
     addIfPresent('symbol-z-order', symbolZOrder);
+    addIfPresent('symbol-height-offset', symbolHeightOffset);
     addIfPresent('icon-allow-overlap', iconAllowOverlap);
     addIfPresent('icon-overlap', iconOverlap);
     addIfPresent('icon-ignore-placement', iconIgnorePlacement);
@@ -1095,6 +1109,7 @@ class SymbolLayerProperties implements LayerProperties {
       symbolAvoidEdges: json['symbol-avoid-edges'],
       symbolSortKey: json['symbol-sort-key'],
       symbolZOrder: json['symbol-z-order'],
+      symbolHeightOffset: json['symbol-height-offset'],
       iconAllowOverlap: json['icon-allow-overlap'],
       iconOverlap: json['icon-overlap'],
       iconIgnorePlacement: json['icon-ignore-placement'],

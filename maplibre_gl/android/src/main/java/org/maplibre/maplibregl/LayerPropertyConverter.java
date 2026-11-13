@@ -103,6 +103,9 @@ class LayerPropertyConverter {
         case "symbol-z-order":
           properties.add(PropertyFactory.symbolZOrder(expression));
           break;
+        case "symbol-height-offset":
+          properties.add(PropertyFactory.symbolHeightOffset(expression));
+          break;
         case "icon-allow-overlap":
           properties.add(PropertyFactory.iconAllowOverlap(expression));
           break;

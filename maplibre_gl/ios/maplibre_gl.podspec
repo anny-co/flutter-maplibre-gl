@@ -14,10 +14,9 @@ MapLibre GL Flutter plugin.
   s.source           = { :path => '.' }
   s.source_files = 'maplibre_gl/Sources/maplibre_gl/**/*'
   s.dependency 'Flutter'
-  # When updating the dependency version,
-  # make sure to also update the version in Package.swift.
-  s.dependency 'MapLibre', '6.28.0'
+  # anny's MapLibre Native build with symbol-height-offset (see ../../native/README.md), as in Package.swift
+  s.vendored_frameworks = 'maplibre_gl/MapLibre.xcframework'
   s.swift_version = '5.0'
-  s.ios.deployment_target = '13.0'
+  s.ios.deployment_target = '15.0'
 end
 
