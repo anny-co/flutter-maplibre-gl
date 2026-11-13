@@ -14,7 +14,7 @@ buildscript {
     }
 }
 
-// anny's MapLibre Native build (symbol-height-offset, see ../../native): the app resolves it too, so every project
+// anny's MapLibre Native build (symbol-height-offset, see ../../native/README.md): the app resolves it too, so every project
 def annyMapLibreMaven = file('maven')
 rootProject.allprojects {
     repositories {
